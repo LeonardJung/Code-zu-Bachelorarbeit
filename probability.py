@@ -116,7 +116,6 @@ def energy_dist(
     target_vals = dist_vals * tf.expand_dims(scale,1) + tf.expand_dims(offset,1)
     '''
 
-    #why is the computation of the probs not handled inside tfp???
     p1_probs = p1.probs
     if p1_probs is None:
         p1_probs = tf.math.softmax(p1.logits)
